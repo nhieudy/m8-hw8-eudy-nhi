@@ -2,16 +2,16 @@
   --primary-color: #06b3bc;
   --text-color: #042d2f;
   --text-color-lighter: #074c50;
-  --secondary-color: #F78828;
-  --warn-color: #FDD219;
-  --danger-color: #FA5456;
-  --white: #FFFFFF;
-  --off-white: #F1F2F4;
-  --gray: #A1A1A1;
+  --secondary-color: #f78828;
+  --warn-color: #fdd219;
+  --danger-color: #fa5456;
+  --white: #ffffff;
+  --off-white: #f1f2f4;
+  --gray: #a1a1a1;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   font-size: 1.3rem;
   color: var(--text-color);
@@ -25,7 +25,8 @@ h1 {
   font-size: 2.5rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -39,16 +40,41 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  overflow: hidden;
+  text-decoration: none;
+}
+header a:hover {
+  animation: test 200ms linear forwards;
+}
+@keyframes test {
+  from {
+    text-decoration: none;
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration: underline;
+    text-decoration-color: auto;
+    color: #fdd219;
+    transform: translateY(-2px);
+  }
 }
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  transition: 300ms;
+}
+
+main a:hover {
+  color: var(--white);
+  background-color: var(--danger-color);
+  text-decoration: none;
 }
 /* end article link transitions */
 
-main > article, nav{
+main > article,
+nav {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -58,7 +84,7 @@ nav {
   display: flex;
 }
 
-nav > a:not(:first-of-type){
+nav > a:not(:first-of-type) {
   margin-left: 24px;
 }
 
@@ -67,7 +93,8 @@ nav > a.logo {
   text-transform: uppercase;
 }
 
-main > section, main > article {
+main > section,
+main > article {
   margin-bottom: 96px;
   box-shadow: 4px 4px 10px var(--gray);
   background-color: var(--white);
@@ -88,11 +115,13 @@ main > section.hero {
 section.hero > .call-to-action {
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
+  text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px,
+    var(--gray) 2px 2px 2px;
   padding: 0 48px;
   margin: 0;
 }
 
+/*added transition for button*/
 section.hero > button {
   background-color: var(--secondary-color);
   border: none;
@@ -100,11 +129,13 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 300ms;
 }
 
-section.hero > button:hover{
+section.hero > button:hover {
   background-color: var(--warn-color);
-  transition: 500ms;
+  box-shadow: 0 0 4px white;
+  font-size: 1rem;
 }
 
 main article {
@@ -113,7 +144,7 @@ main article {
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
 }
 
 main > article img {
