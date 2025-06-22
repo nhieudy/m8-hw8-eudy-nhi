@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #06b3bc;
+  --text-color: #042d2f;
+  --text-color-lighter: #074c50;
+  --secondary-color: #F78828;
+  --warn-color: #FDD219;
+  --danger-color: #FA5456;
+  --white: #FFFFFF;
+  --off-white: #F1F2F4;
+  --gray: #A1A1A1;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a1a1a1' fill-opacity='0.59' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 48px 0;
+  border-bottom: var(--secondary-color) 6px solid;
+}
+
+/* header link animations! */
+header a {
+  font-size: 1.5rem;
+  color: var(--off-white);
+}
+/* end header link animations */
+
+/* article link transitions */
+main a {
+  color: var(--danger-color);
+}
+/* end article link transitions */
+
+main > article, nav{
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+}
+
+nav > a:not(:first-of-type){
+  margin-left: 24px;
+}
+
+nav > a.logo {
+  margin-right: auto;
+  text-transform: uppercase;
+}
+
+main > section, main > article {
+  margin-bottom: 96px;
+  box-shadow: 4px 4px 10px var(--gray);
+  background-color: var(--white);
+}
+
+main > section.hero {
+  height: 300px;
+  background-image: url(https://picsum.photos/1920/1000);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+section.hero > .call-to-action {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
+  padding: 0 48px;
+  margin: 0;
+}
+
+section.hero > button {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+section.hero > button:hover{
+  background-color: var(--warn-color);
+  transition: 500ms;
+}
+
+main article {
+  padding: 48px 96px;
+}
+
+main p {
+  line-height: 1.75;
+  margin-bottom: 48px;;
+}
+
+main > article img {
+  float: left;
+  width: 300px;
+  height: auto;
+  margin-right: 24px;
+  margin-bottom: 6px;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--gray);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 24px 0;
+  color: var(--off-white);
+}
